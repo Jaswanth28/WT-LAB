@@ -1,27 +1,24 @@
-//this is aservlet file 
-//creeated in serv ee
 
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 /**
- * Servlet implementation class serv
+ * Servlet implementation class serv1
  */
-@WebServlet("/serv")
-public class serv extends HttpServlet {
+public class serv1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public serv() {
+    public serv1() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -30,8 +27,8 @@ public class serv extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter pw= response.getWriter();
-		String s=request.getParameter("t1");
+		PrintWriter pw=response.getWriter();
+		String s = request.getParameter("t1");
 		pw.println("<h1> hello "+s+"</h1>");
 		pw.close();
 	}
